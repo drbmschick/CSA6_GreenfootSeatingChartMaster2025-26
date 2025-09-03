@@ -11,9 +11,7 @@ HOW TO START THIS PROJECT:  To start this project, assuming that you have Greenf
 AUTHORS:                    Mr. Kaehms, Dr. Schick, Mr. Song,  and CSA students
 
 CONTRIBUTERS:               Kilgore Trout
-                            (Add you name here once your code 
-                             is added and correct)
-
+                            Aarav Jaura
 USER INSTRUCTIONS:
 
 
