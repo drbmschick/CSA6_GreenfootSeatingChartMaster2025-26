@@ -152,10 +152,15 @@ public class Classroom extends World
         KilgoreTrout kilgoretrout = new KilgoreTrout();
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
+
         BishalDas bishaldas = new BishalDas();
         addObject(bishaldas,6,4);
         bishaldas.assignSeat();
   
+        SarrafEashan sarrafeashan = new SarrafEashan();
+        addObject(sarrafeashan,8,6);
+        sarrafeashan.assignSeat();
+        
     }
     
     public List<Student> getAllStudents(){
