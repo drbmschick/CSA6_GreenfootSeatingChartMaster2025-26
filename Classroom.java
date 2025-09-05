@@ -162,7 +162,9 @@ public class Classroom extends World
         addObject(vinodpranav, 5,4);
         vinodpranav.assignSeat();
 
-        
+        AnayC anay = new AnayC(); 
+        addObject(anay, 3, 7); 
+        kilgoretrout.assignSeat();
     
         
         MageshMeghna meghnamagesh = new MageshMeghna();
