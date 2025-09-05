@@ -155,6 +155,9 @@ public class Classroom extends World
         SarrafEashan sarrafeashan = new SarrafEashan();
         addObject(sarrafeashan,8,6);
         sarrafeashan.assignSeat();
+        HemanthMerugu hemanthmerugu = new HemanthMerugu();
+        addObject(hemanthmerugu, 9, 10);
+        hemanthmerugu.assignSeat();
     }
     
     public List<Student> getAllStudents(){
