@@ -183,6 +183,10 @@ public class Classroom extends World
         RuBhavanasi rubhavanasi = new RuBhavanasi();
         addObject(rubhavanasi,6,7);
         rubhavanasi.assignSeat();
+
+       LucasCaswell lucascaswell = new LucasCaswell();
+        addObject(lucascaswell,2,3);
+        lucascaswell.assignSeat();
   
 
 
