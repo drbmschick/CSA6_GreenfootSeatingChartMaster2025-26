@@ -153,6 +153,83 @@ public class Classroom extends World
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
 
+        KilgoreTrout kilgoretrout = new KilgoreTrout();
+        addObject(kilgoretrout,2,3);
+        kilgoretrout.assignSeat();
+
+        VinodPranav vinodpranav = new VinodPranav();
+        addObject(vinodpranav, 5,4);
+        vinodpranav.assignSeat();
+
+        AnayC anay = new AnayC(); 
+        addObject(anay, 3, 7); 
+        kilgoretrout.assignSeat();
+    
+        
+        MageshMeghna meghnamagesh = new MageshMeghna();
+        addObject(meghnamagesh,5,10);
+        meghnamagesh.assignSeat();
+
+       
+        
+
+        RainaUpadhyay rainaupadhyay = new RainaUpadhyay();
+        addObject(rainaupadhyay,3,6);
+        rainaupadhyay.assignSeat();
+        
+       
+  
+
+        EngelbertsonSpencer engelbertsonSpencer = new EngelbertsonSpencer(true);
+        addObject(engelbertsonSpencer,2,7);
+        engelbertsonSpencer.assignSeat(); //this method does nothing other than setting variables to the exact same value
+ 
+ 
+        KrishivJaini krishivjaini = new KrishivJaini();
+        addObject(krishivjaini,8,10);
+        krishivjaini.assignSeat();
+   
+
+        KrishnanSanjay krishnansanjay = new KrishnanSanjay();
+        addObject(krishnansanjay,8,3);
+        krishnansanjay.assignSeat();
+
+
+        ShastriAryav shastriaryav = new ShastriAryav();
+        addObject(shastriaryav,9,9);
+        shastriaryav.assignSeat();
+
+  
+        VinothYashwant vinothyashwant = new VinothYashwant();
+        addObject(vinothyashwant,5,6);
+        vinothyashwant.assignSeat();
+
+        ShirolRishi shirolrishi = new ShirolRishi();
+        addObject(shirolrishi,9,4);
+        shirolrishi.assignSeat();
+       
+
+        JeganKrishna jegankrishna = new JeganKrishna();
+        addObject(jegankrishna,6,10);
+        jegankrishna.assignSeat();
+
+
+        SarrafEashan sarrafeashan = new SarrafEashan();
+        addObject(sarrafeashan,8,6);
+        sarrafeashan.assignSeat();
+
+        HemanthMerugu hemanthmerugu = new HemanthMerugu();
+        addObject(hemanthmerugu, 9, 10);
+        hemanthmerugu.assignSeat();
+        
+        BrianSchick brianschick = new BrianSchick();
+        addObject(brianschick,2,9);
+        brianschick.assignSeat();
+
+        RuBhavanasi rubhavanasi = new RuBhavanasi();
+        addObject(rubhavanasi,6,7);
+        rubhavanasi.assignSeat();
+     
         AshaShanbhogue ashashanbhogue = new AshaShanbhogue();
         addObject(ashashanbhogue,6,3);
         ashashanbhogue.assignSeat();
