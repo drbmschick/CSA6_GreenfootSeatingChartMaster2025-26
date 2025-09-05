@@ -207,6 +207,10 @@ public class Classroom extends World
         ShirolRishi shirolrishi = new ShirolRishi();
         addObject(shirolrishi,9,4);
         shirolrishi.assignSeat();
+     
+        RayhanAli rayhanali = new RayhanAli();
+        addObject(rayhanali, 3,4);
+        rayhanali.assignSeat();
        
 
         JeganKrishna jegankrishna = new JeganKrishna();
