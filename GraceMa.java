@@ -1,17 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The BrianSchick class can be used as a model for your own class that represents you and your seating location in AP CSA
+ * The GraceMa class can be used as a model for your own class that represents you and your seating location in AP CSA.
  * 
  * @author Mr. Kaehms
  * @version 2.0 Aug 13, 2019
  * @version 3.0 July 21, 2020
  */
-public class BrianSchick extends Student implements SpecialInterestOrHobby
+public class GraceMa extends Student implements SpecialInterestOrHobby
 {
 
     /**
-     * Constructor for the BrianSchick class.
+     * Constructor for the GraceMa class.
      * Constructors are special methods with the same exact name as the class name.  
      * Constructors to not have return types.
      * Constructors can be overloaded. This means we can call a constructor with different sets of parameter
@@ -22,7 +22,7 @@ public class BrianSchick extends Student implements SpecialInterestOrHobby
      * @param int s (seat number within row seating arrangement)
      * 
      */
-    public BrianSchick(String f, String l, int r, int s) {
+    public GraceMa(String f, String l, int r, int s) {
         firstName=f;
         lastName=l;
         mySeatX=r;
@@ -38,11 +38,11 @@ public class BrianSchick extends Student implements SpecialInterestOrHobby
      * Pay attention to how the row and seat variables set the location of the image.  1,1 is the first cell in the upper left
      * of the classroom.
      */
-    public BrianSchick() {
-        firstName="Brian";
-        lastName="Schick";
-        mySeatX=2;
-        mySeatY=9;
+    public GraceMa() {
+        firstName="Kilgore";
+        lastName="Trout";
+        mySeatX=1;
+        mySeatY=1;
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
@@ -52,7 +52,7 @@ public class BrianSchick extends Student implements SpecialInterestOrHobby
     }
     
      /**
-     * Act - do whatever the BrianSchick actor wants to do. This method is called whenever
+     * Act - do whatever the GraceMa actor wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */   
     public void act() 
@@ -66,7 +66,7 @@ public class BrianSchick extends Student implements SpecialInterestOrHobby
                 getName();
                 sayName(soundFile);
             
-                myHobby("I like to play video games!");
+                myHobby("I like to time travel!");
             // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat
@@ -93,7 +93,7 @@ public class BrianSchick extends Student implements SpecialInterestOrHobby
 
    
     /**
-     * This is a local method specific to the BrianSchick class used to animate the character once the image is clicked on.
+     * This is a local method specific to the GraceMa class used to animate the character once the image is clicked on.
      * You should write your own methods to perform your own animation for your character/avatar.
      */
     public void circleClass(){
