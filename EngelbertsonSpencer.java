@@ -1,17 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.ArrayList;
 /**
- * The BrianSchick class can be used as a model for your own class that represents you and your seating location in AP CSA
+ * The EngelbertsonSpencer class can be used as a model for your own class that represents you and your seating location in AP CSA
  * 
  * @author Mr. Kaehms
  * @version 2.0 Aug 13, 2019
  * @version 3.0 July 21, 2020
  */
-public class BrianSchick extends Student implements SpecialInterestOrHobby
+public class EngelbertsonSpencer extends Student implements SpecialInterestOrHobby
 {
-
+    private ArrayList<Student> miniMes = new ArrayList<Student>();
+    private boolean isClickable = true;
     /**
-     * Constructor for the BrianSchick class.
+     * Constructor for the EngelbertsonSpencer class.
      * Constructors are special methods with the same exact name as the class name.  
      * Constructors to not have return types.
      * Constructors can be overloaded. This means we can call a constructor with different sets of parameter
@@ -22,7 +23,7 @@ public class BrianSchick extends Student implements SpecialInterestOrHobby
      * @param int s (seat number within row seating arrangement)
      * 
      */
-    public BrianSchick(String f, String l, int r, int s) {
+    public EngelbertsonSpencer(String f, String l, int r, int s) {
         firstName=f;
         lastName=l;
         mySeatX=r;
@@ -38,27 +39,34 @@ public class BrianSchick extends Student implements SpecialInterestOrHobby
      * Pay attention to how the row and seat variables set the location of the image.  1,1 is the first cell in the upper left
      * of the classroom.
      */
-    public BrianSchick() {
-        firstName="Brian";
-        lastName="Schick";
+    public EngelbertsonSpencer(boolean isOriginal) {
+        if (!isOriginal){
+            isClickable = false;
+        }
+        firstName="Spencer";
+        lastName="Engelbertson";
         mySeatX=2;
-        mySeatY=9;
+        mySeatY=7;
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
-       portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
-       standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
+       if (isOriginal){
+           portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
+       } else{
+           portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
+       }
+       standingFile= firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
         soundFile=firstName.toLowerCase()+ lastName.toLowerCase()+".wav";
         setImage(portraitFile);
         sitting=true;
     }
     
      /**
-     * Act - do whatever the BrianSchick actor wants to do. This method is called whenever
+     * Act - do whatever the EngelbertsonSpencer actor wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */   
     public void act() 
     {
         // Add your action code here.
-        if(Greenfoot.mouseClicked(this)){
+        if(Greenfoot.mouseClicked(this) && isClickable){
           //  if (sitting){
                 sitting=false;
                 setImage(standingFile);
@@ -66,7 +74,7 @@ public class BrianSchick extends Student implements SpecialInterestOrHobby
                 getName();
                 sayName(soundFile);
             
-                myHobby("I like to play video games!");
+                myHobby("I like sculpting");
             // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat
@@ -93,35 +101,55 @@ public class BrianSchick extends Student implements SpecialInterestOrHobby
 
    
     /**
-     * This is a local method specific to the BrianSchick class used to animate the character once the image is clicked on.
+     * This is a local method specific to the EngelbertsonSpencer class used to animate the character once the image is clicked on.
      * You should write your own methods to perform your own animation for your character/avatar.
      */
     public void circleClass(){
-        setLocation(0,0);
-         Greenfoot.delay(10);
-        // move right
-        for (int i=1;i<=9;i++){
-            setLocation(i,0);
+        int currentMe = 0;
+        for (int i = getX(); i >= 0; i--){
+            setLocation(i, getY());
             Greenfoot.delay(10);
         }
-        // move back
-        for (int i=1;i<=5;i++){
-            setLocation(9,i);
+        for (int i = getY(); i >= 0; i--){
+            setLocation(getX(), i);
             Greenfoot.delay(10);
-        }      
-         // move left
-        for (int i=9;i>=0;i--){
-            setLocation(i,5);
-            Greenfoot.delay(10);
-        }      
-              // move Forward
-        for (int i=5;i>=0;i--){
-            setLocation(0,i);
-            Greenfoot.delay(10);
-        }   
-           Greenfoot.delay(20);
-           returnToSeat();
+        }
+        int currentStep = 0;
+        // this loop serves to create each of the mini mes around myself kind of in an backwards L shape
+        for (int i=1; i<=13; i++){
+                boolean hitBottom = false; // this variable checks that the the mini mes have completed the adjacent vertical column
+                // this loop runs 13 times and accounts for each enclosing set of images
+                // j <= 1 + 2i accounts for the growing amount of pictures as we get further out on images
+                for (int j = 0; j < 1 + 2*i; j++){
+                    EngelbertsonSpencer newMe = new EngelbertsonSpencer(false);
+                    miniMes.add(newMe);
+                    if (!hitBottom){
+                        // while the bottom is not hit draw an image with each image being 1 unit below the last
+                        getWorld().addObject(newMe, currentStep+1, j);
+                    } else{
+                        // if we have hit the bottom we move left towards the edge with each image
+                        getWorld().addObject(newMe, currentStep+1-(j-i), currentStep+1);
+                    }
+                    if (newMe.getY() > currentStep && hitBottom == false){
+                        hitBottom = true;
+                    }
+                    Greenfoot.delay(2);
+                }
+                currentStep++;
+        }
+        Greenfoot.delay(70);
+        //delete all the images that are not the original
+        for (int i = 0; i < miniMes.size(); i++){
+            if (miniMes.get(i) != null){
+                getWorld().removeObject(miniMes.get(i));
+                i--;
+            }
+            i++;
+        }
+        
     }
+        
+    
      /**
      * myHobby is one of the interfaces provided.  
      * An interface is just a contract for the methods that you will implement in your code.  The College Board no longer
@@ -129,6 +157,6 @@ public class BrianSchick extends Student implements SpecialInterestOrHobby
      */
      public void myHobby(String s) {
          System.out.println(s);
-}
+    }
 
 }
