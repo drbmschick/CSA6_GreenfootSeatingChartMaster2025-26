@@ -146,12 +146,27 @@ public class Classroom extends World
     private void prepare()
     {
         createDeskLayout();
- // Each student needs to create their specific instance following the KilgoreTrout example.
- // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
- // and then clicking on the inspect text
+     // Each student needs to create their specific instance following the KilgoreTrout example.
+     // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
+     // and then clicking on the inspect text
         KilgoreTrout kilgoretrout = new KilgoreTrout();
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
+        
+        EngelbertsonSpencer engelbertsonSpencer = new EngelbertsonSpencer(true);
+        addObject(engelbertsonSpencer,2,7);
+        engelbertsonSpencer.assignSeat(); //this method does nothing other than setting variables to the exact same value
+ 
+ 
+        KrishivJaini krishivjaini = new KrishivJaini();
+        addObject(krishivjaini,8,10);
+        krishivjaini.assignSeat();
+   
+
+        KrishnanSanjay krishnansanjay = new KrishnanSanjay();
+        addObject(krishnansanjay,8,3);
+        krishnansanjay.assignSeat();
+
 
         VinothYashwant vinothyashwant = new VinothYashwant();
         addObject(vinothyashwant,5,6);
@@ -164,6 +179,7 @@ public class Classroom extends World
         ShastriAryav shastriaryav = new ShastriAryav();
         addObject(shastriaryav,9,9);
         shastriaryav.assignSeat();
+
   
         VinothYashwant vinothyashwant = new VinothYashwant();
         addObject(vinothyashwant,5,6);
@@ -184,9 +200,10 @@ public class Classroom extends World
         addObject(sarrafeashan,8,6);
         sarrafeashan.assignSeat();
 
-
+        HemanthMerugu hemanthmerugu = new HemanthMerugu();
+        addObject(hemanthmerugu, 9, 10);
+        hemanthmerugu.assignSeat();
         
-
         BrianSchick brianschick = new BrianSchick();
         addObject(brianschick,2,9);
         brianschick.assignSeat();
