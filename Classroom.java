@@ -152,17 +152,20 @@ public class Classroom extends World
         KilgoreTrout kilgoretrout = new KilgoreTrout();
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
-        
-        RuBhavanasi rubhavanasi = new RuBhavanasi();
-        addObject(rubhavanasi,6,7);
-        rubhavanasi.assignSeat();
-  
+<<<<<<< Updated upstream
         SarrafEashan sarrafeashan = new SarrafEashan();
         addObject(sarrafeashan,8,6);
         sarrafeashan.assignSeat();
         VinothYashwant vinothyashwant = new VinothYashwant();
         addObject(vinothyashwant,5,6);
         vinothyashwant.assignSeat();
+=======
+        
+        RayhanAli rayhanali = new RayhanAli();
+        addObject(rayhanali, 3,4);
+        rayhanali.assignSeat();
+  
+>>>>>>> Stashed changes
     }
     
     public List<Student> getAllStudents(){
