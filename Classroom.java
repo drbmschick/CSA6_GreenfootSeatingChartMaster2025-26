@@ -199,6 +199,11 @@ public class Classroom extends World
         shastriaryav.assignSeat();
 
 
+
+       LucasCaswell lucascaswell = new LucasCaswell();
+        addObject(lucascaswell,2,3);
+        lucascaswell.assignSeat();
+
   
     }
     
