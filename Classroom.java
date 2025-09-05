@@ -167,6 +167,14 @@ public class Classroom extends World
 
        
         
+
+        RainaUpadhyay rainaupadhyay = new RainaUpadhyay();
+        addObject(rainaupadhyay,3,6);
+        rainaupadhyay.assignSeat();
+        
+       
+  
+
         EngelbertsonSpencer engelbertsonSpencer = new EngelbertsonSpencer(true);
         addObject(engelbertsonSpencer,2,7);
         engelbertsonSpencer.assignSeat(); //this method does nothing other than setting variables to the exact same value
@@ -293,4 +301,8 @@ public class Classroom extends World
        }
    }
 }
+
+}
+
+
 
