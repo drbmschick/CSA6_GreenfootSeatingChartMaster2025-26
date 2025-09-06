@@ -1,3 +1,4 @@
+
 import java.util.*;
 import greenfoot.*;
 //import java.util.ArrayList;
@@ -152,6 +153,15 @@ public class Classroom extends World
         KilgoreTrout kilgoretrout = new KilgoreTrout();
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
+        
+        VinothYashwant vinothyashwant = new VinothYashwant();
+        addObject(vinothyashwant,5,6);
+        vinothyashwant.assignSeat();
+        
+        AaravJaura aaravjaura = new AaravJaura();
+        addObject(aaravjaura, 2,4);
+        aaravjaura.assignSeat();
+  
 
         KilgoreTrout kilgoretrout = new KilgoreTrout();
         addObject(kilgoretrout,2,3);
@@ -360,12 +370,4 @@ public class Classroom extends World
        }
    }
 }
-
 }
-
-
-}
-
-
-
-
