@@ -194,7 +194,12 @@ public class Classroom extends World
         RuBhavanasi rubhavanasi = new RuBhavanasi();
         addObject(rubhavanasi,6,7);
         rubhavanasi.assignSeat();
-  
+        
+        IshitaPrasad prasadishita = new IshitaPrasad();
+        addObject(prasadishita,5,10);
+        prasadishita.assignSeat();
+        
+          
 
 
     }
@@ -268,5 +273,8 @@ public class Classroom extends World
          ioe.printStackTrace();
        }
    }
+ }
 }
+
+
 

@@ -25,12 +25,15 @@ public class IshitaPrasad extends Student implements SpecialInterestOrHobby
     public IshitaPrasad(String f, String l, int r, int s) {
         firstName=f;
         lastName=l;
-        mySeatX=r;
-        mySeatY=s;
+        mySeatX=3;
+        mySeatY=5;
         portraitFile=f.toLowerCase()+l.toLowerCase()+".jpg";    // Make sure to name your image files firstlast.jpg, all lowercase!!!
         standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
         soundFile=f.toLowerCase()+l.toLowerCase()+".wav";  // Make sure to name your sound files firstlast.wav, all lowercase!!!
         setImage(portraitFile);
+        GreenfootImage img = getImage();
+        img.scale(img.getWidth() / 3, img.getHeight() / 3);
+        setImage(img);
         sitting=true;
     }
     /**
@@ -39,15 +42,18 @@ public class IshitaPrasad extends Student implements SpecialInterestOrHobby
      * of the classroom.
      */
     public IshitaPrasad() {
-        firstName="Kilgore";
-        lastName="Trout";
-        mySeatX=1;
-        mySeatY=1;
+        firstName="Ishita";
+        lastName="Prasad";
+        mySeatX=3;
+        mySeatY=5;
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
         soundFile=firstName.toLowerCase()+ lastName.toLowerCase()+".wav";
         setImage(portraitFile);
+        GreenfootImage img = getImage();
+        img.scale(img.getWidth() / 3, img.getHeight() / 3);
+        setImage(img);
         sitting=true;
     }
     
@@ -59,21 +65,25 @@ public class IshitaPrasad extends Student implements SpecialInterestOrHobby
     {
         // Add your action code here.
         if(Greenfoot.mouseClicked(this)){
-          //  if (sitting){
-                sitting=false;
-                setImage(standingFile);
-                System.out.println(""); // Print a blank line to create space between any student output.
-                getName();
-                sayName(soundFile);
-            
-                myHobby("I like to time travel!");
-            // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
-            // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
-            // Call the sitDown() method to move back  to your seat
-            
-                circleClass();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
-           
-                sitDown();
+                if (sitting) {
+                    sitting=false;
+                    setImage(standingFile);
+                    GreenfootImage standingImg = getImage();
+                    standingImg.scale(standingImg.getWidth() / 20, standingImg.getHeight() / 20);
+                    setImage(standingImg);
+                    System.out.println(""); // Print a blank line to create space between any student output.
+                    getName();
+                    sayName(soundFile);
+                
+                    myHobby("I like baking/cooking");
+                // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
+                // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
+                // Call the sitDown() method to move back  to your seat
+                
+                    spinAndJump();  // Your own special method
+               
+                    sitDown();
+                }
             }
         
     } 
@@ -96,31 +106,20 @@ public class IshitaPrasad extends Student implements SpecialInterestOrHobby
      * This is a local method specific to the IshitaPrasad class used to animate the character once the image is clicked on.
      * You should write your own methods to perform your own animation for your character/avatar.
      */
-    public void circleClass(){
-        setLocation(0,0);
-         Greenfoot.delay(10);
-        // move right
-        for (int i=1;i<=9;i++){
-            setLocation(i,0);
-            Greenfoot.delay(10);
+     public void spinAndJump(){
+        setRotation(0);
+        // Spin 360 degrees
+        for(int i=0; i<360; i+=15){
+            setRotation(i);
+            Greenfoot.delay(5);
         }
-        // move back
-        for (int i=1;i<=5;i++){
-            setLocation(9,i);
-            Greenfoot.delay(10);
-        }      
-         // move left
-        for (int i=9;i>=0;i--){
-            setLocation(i,5);
-            Greenfoot.delay(10);
-        }      
-              // move Forward
-        for (int i=5;i>=0;i--){
-            setLocation(0,i);
-            Greenfoot.delay(10);
-        }   
-           Greenfoot.delay(20);
-           returnToSeat();
+        // Jump up and down 3 times
+        for(int i=0; i<3; i++){
+            setLocation(getX(), getY()-1);
+            Greenfoot.delay(5);
+            setLocation(getX(), getY()+1);
+            Greenfoot.delay(5);
+        }
     }
      /**
      * myHobby is one of the interfaces provided.  
@@ -131,4 +130,14 @@ public class IshitaPrasad extends Student implements SpecialInterestOrHobby
          System.out.println(s);
 }
 
+    @Override
+    public void sitDown() {
+        setRotation(0);
+        setImage(portraitFile);
+        GreenfootImage img = getImage();
+        img.scale(img.getWidth()/3, img.getHeight()/3);
+        setImage(img);
+        setLocation(mySeatX, mySeatY);
+        sitting = true;
+    }
 }
