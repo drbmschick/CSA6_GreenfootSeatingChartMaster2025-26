@@ -130,7 +130,7 @@ public class IshitaPrasad extends Student implements SpecialInterestOrHobby
          System.out.println(s);
 }
 
-    @Override
+    
     public void sitDown() {
         setRotation(0);
         setImage(portraitFile);
