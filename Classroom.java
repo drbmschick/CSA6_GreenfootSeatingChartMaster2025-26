@@ -1,4 +1,3 @@
-
 import java.util.*;
 import greenfoot.*;
 //import java.util.ArrayList;
@@ -138,12 +137,6 @@ public class Classroom extends World
         studentdesk20.setDeskGroup(8);
     }
    
-    
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
-    
     private void prepare()
     {
         createDeskLayout();
@@ -190,7 +183,7 @@ public class Classroom extends World
         addObject(engelbertsonSpencer,2,7);
         engelbertsonSpencer.assignSeat(); //this method does nothing other than setting variables to the exact same value
  
- 
+
         KrishivJaini krishivjaini = new KrishivJaini();
         addObject(krishivjaini,8,10);
         krishivjaini.assignSeat();
@@ -205,10 +198,6 @@ public class Classroom extends World
         addObject(shastriaryav,9,9);
         shastriaryav.assignSeat();
 
-  
-        VinothYashwant vinothyashwant = new VinothYashwant();
-        addObject(vinothyashwant,5,6);
-        vinothyashwant.assignSeat();
 
         ShirolRishi shirolrishi = new ShirolRishi();
         addObject(shirolrishi,9,4);
@@ -239,16 +228,18 @@ public class Classroom extends World
         RuBhavanasi rubhavanasi = new RuBhavanasi();
         addObject(rubhavanasi,6,7);
         rubhavanasi.assignSeat();
-     
+
+        IshitaPrasad prasadishita = new IshitaPrasad();
+        addObject(prasadishita,5,10);
+        prasadishita.assignSeat();
+        
         AshaShanbhogue ashashanbhogue = new AshaShanbhogue();
         addObject(ashashanbhogue,6,3);
         ashashanbhogue.assignSeat();
 
-       LucasCaswell lucascaswell = new LucasCaswell();
+        LucasCaswell lucascaswell = new LucasCaswell();
         addObject(lucascaswell,2,3);
         lucascaswell.assignSeat();
-
-  
     }
     
     public List<Student> getAllStudents(){
@@ -287,7 +278,6 @@ public class Classroom extends World
     }
     
  
-    
     // modified from https://beginnersbook.com/2014/01/how-to-append-to-a-file-in-java/
     
 
@@ -320,5 +310,5 @@ public class Classroom extends World
          ioe.printStackTrace();
        }
    }
-}
+ }
 }
