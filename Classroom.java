@@ -1,3 +1,4 @@
+
 import java.util.*;
 import greenfoot.*;
 //import java.util.ArrayList;
@@ -152,10 +153,15 @@ public class Classroom extends World
         KilgoreTrout kilgoretrout = new KilgoreTrout();
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
-
-        KilgoreTrout kilgoretrout = new KilgoreTrout();
-        addObject(kilgoretrout,2,3);
-        kilgoretrout.assignSeat();
+        
+        VinothYashwant vinothyashwant = new VinothYashwant();
+        addObject(vinothyashwant,5,6);
+        vinothyashwant.assignSeat();
+        
+        AaravJaura aaravjaura = new AaravJaura();
+        addObject(aaravjaura, 2,4);
+        aaravjaura.assignSeat();
+  
 
         VinodPranav vinodpranav = new VinodPranav();
         addObject(vinodpranav, 5,4);
@@ -215,6 +221,10 @@ public class Classroom extends World
         ShirolRishi shirolrishi = new ShirolRishi();
         addObject(shirolrishi,9,4);
         shirolrishi.assignSeat();
+     
+        RayhanAli rayhanali = new RayhanAli();
+        addObject(rayhanali, 3,4);
+        rayhanali.assignSeat();
        
 
         JeganKrishna jegankrishna = new JeganKrishna();
@@ -242,6 +252,7 @@ public class Classroom extends World
         AshaShanbhogue ashashanbhogue = new AshaShanbhogue();
         addObject(ashashanbhogue,6,3);
         ashashanbhogue.assignSeat();
+
 
 
         VinodPranav vinodpranav = new VinodPranav();
@@ -285,6 +296,7 @@ public class Classroom extends World
         ShastriAryav shastriaryav = new ShastriAryav();
         addObject(shastriaryav,9,9);
         shastriaryav.assignSeat();
+
 
        LucasCaswell lucascaswell = new LucasCaswell();
         addObject(lucascaswell,2,3);
@@ -361,12 +373,4 @@ public class Classroom extends World
        }
    }
 }
-
 }
-
-
-}
-
-
-
-
