@@ -155,6 +155,9 @@ public class Classroom extends World
         UthayasegarKrishay uthayasegarkrishay = new UthayasegarKrishay();
         addObject(uthayasegarkrishay,6,6);
         uthayasegarkrishay.assignSeat();
+        BishalDas bishaldas = new BishalDas();
+        addObject(bishaldas,6,4);
+        bishaldas.assignSeat();
   
     }
     
