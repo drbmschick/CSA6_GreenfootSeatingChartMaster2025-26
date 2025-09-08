@@ -39,10 +39,10 @@ public class GraceMa extends Student implements SpecialInterestOrHobby
      * of the classroom.
      */
     public GraceMa() {
-        firstName="Kilgore";
-        lastName="Trout";
-        mySeatX=1;
-        mySeatY=1;
+        firstName="Grace";
+        lastName="Ma";
+        mySeatX=9;
+        mySeatY=3;
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
@@ -66,7 +66,7 @@ public class GraceMa extends Student implements SpecialInterestOrHobby
                 getName();
                 sayName(soundFile);
             
-                myHobby("I like to time travel!");
+                myHobby("I like drawing!");
             // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat

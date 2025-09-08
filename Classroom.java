@@ -205,10 +205,6 @@ public class Classroom extends World
         addObject(shastriaryav,9,9);
         shastriaryav.assignSeat();
 
-  
-        VinothYashwant vinothyashwant = new VinothYashwant();
-        addObject(vinothyashwant,5,6);
-        vinothyashwant.assignSeat();
 
         ShirolRishi shirolrishi = new ShirolRishi();
         addObject(shirolrishi,9,4);
@@ -247,6 +243,10 @@ public class Classroom extends World
        LucasCaswell lucascaswell = new LucasCaswell();
         addObject(lucascaswell,2,3);
         lucascaswell.assignSeat();
+        
+        GraceMa gracema = new GraceMa();
+        addObject(gracema,9,3);
+        gracema.assignSeat();
 
   
     }
