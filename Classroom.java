@@ -204,6 +204,9 @@ public class Classroom extends World
         addObject(shastriaryav,9,9);
         shastriaryav.assignSeat();
 
+        addObject(vinothyashwant,5,6);
+        vinothyashwant.assignSeat();
+
 
         ShirolRishi shirolrishi = new ShirolRishi();
         addObject(shirolrishi,9,4);
@@ -250,8 +253,11 @@ public class Classroom extends World
         TotreArjun totrearjun = new TotreArjun();
         addObject(totrearjun,5,3);
         totrearjun.assignSeat();
+        
+        IshitaPrasad ishitaprasad = new IshitaPrasad();
+        addObject(ishitaprasad,5,10);
+        ishitaprasad.assignSeat();
 
-     
 
 
         BishalDas bishaldas = new BishalDas();
