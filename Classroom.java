@@ -253,12 +253,6 @@ public class Classroom extends World
         TotreArjun totrearjun = new TotreArjun();
         addObject(totrearjun,5,3);
         totrearjun.assignSeat();
-        
-        IshitaPrasad ishitaprasad = new IshitaPrasad();
-        addObject(ishitaprasad,5,10);
-        ishitaprasad.assignSeat();
-
-
 
         BishalDas bishaldas = new BishalDas();
         addObject(bishaldas,6,4);
