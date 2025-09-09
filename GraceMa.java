@@ -97,29 +97,26 @@ public class GraceMa extends Student implements SpecialInterestOrHobby
      * You should write your own methods to perform your own animation for your character/avatar.
      */
     public void circleClass(){
-        setLocation(0,0);
-         Greenfoot.delay(10);
+        setLocation(9,3);
+         Greenfoot.delay(3);
         // move right
-        for (int i=1;i<=9;i++){
-            setLocation(i,0);
-            Greenfoot.delay(10);
+        for (int i=3;i<=11;i++){
+            setLocation(10,i);
+            Greenfoot.delay(3);
         }
-        // move back
-        for (int i=1;i<=5;i++){
-            setLocation(9,i);
-            Greenfoot.delay(10);
-        }      
-         // move left
-        for (int i=9;i>=0;i--){
-            setLocation(i,5);
-            Greenfoot.delay(10);
-        }      
-              // move Forward
-        for (int i=5;i>=0;i--){
-            setLocation(0,i);
-            Greenfoot.delay(10);
-        }   
-           Greenfoot.delay(20);
+        for (int i=10;i>=1;i--){
+            setLocation(i,11);
+            Greenfoot.delay(3);
+        }
+        for (int i=11;i>=2;i--){
+            setLocation(1,i);
+            Greenfoot.delay(3);
+        }
+        for (int i=1;i<=10;i++){
+            setLocation(i,2);
+            Greenfoot.delay(3);
+        }
+           Greenfoot.delay(3);
            returnToSeat();
     }
      /**
