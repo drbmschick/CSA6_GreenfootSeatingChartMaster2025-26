@@ -1,4 +1,3 @@
-
 import java.util.*;
 import greenfoot.*;
 //import java.util.ArrayList;
@@ -154,6 +153,12 @@ public class Classroom extends World
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
         
+        KhoslaSamreen samreen = new KhoslaSamreen();
+        addObject(samreen, 6, 10);   
+        samreen.assignSeat();
+
+
+        
         VinothYashwant vinothyashwant = new VinothYashwant();
         addObject(vinothyashwant,5,6);
         vinothyashwant.assignSeat();
@@ -183,7 +188,9 @@ public class Classroom extends World
         addObject(rainaupadhyay,3,6);
         rainaupadhyay.assignSeat();
         
-       
+        IniyaRajanikanth iniyarajanikanth = new IniyaRajanikanth();
+        addObject(iniyarajanikanth,8,4);
+        iniyarajanikanth.assignSeat();
   
 
         EngelbertsonSpencer engelbertsonSpencer = new EngelbertsonSpencer(true);
@@ -204,11 +211,14 @@ public class Classroom extends World
         ShastriAryav shastriaryav = new ShastriAryav();
         addObject(shastriaryav,9,9);
         shastriaryav.assignSeat();
-
+        
+        SanjanaSalkar sanjanasalkar = new SanjanaSalkar();
+        addObject(sanjanasalkar,8,7);
+        sanjanasalkar.assignSeat();
   
-        VinothYashwant vinothyashwant = new VinothYashwant();
-        addObject(vinothyashwant,5,6);
-        vinothyashwant.assignSeat();
+        //VinothYashwant vinothyashwant = new VinothYashwant();
+        //addObject(vinothyashwant,5,6);
+        //vinothyashwant.assignSeat();
 
         ShirolRishi shirolrishi = new ShirolRishi();
         addObject(shirolrishi,9,4);
@@ -244,11 +254,21 @@ public class Classroom extends World
         addObject(ashashanbhogue,6,3);
         ashashanbhogue.assignSeat();
 
-       LucasCaswell lucascaswell = new LucasCaswell();
+        LucasCaswell lucascaswell = new LucasCaswell();
         addObject(lucascaswell,2,3);
         lucascaswell.assignSeat();
+     
+        TotreArjun totrearjun = new TotreArjun();
+        addObject(totrearjun,5,3);
+        totrearjun.assignSeat();
 
-  
+     
+
+
+        BishalDas bishaldas = new BishalDas();
+        addObject(bishaldas,6,4);
+        bishaldas.assignSeat();
+
     }
     
     public List<Student> getAllStudents(){
