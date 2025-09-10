@@ -153,6 +153,10 @@ public class Classroom extends World
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
         
+        KhoslaSamreen samreen = new KhoslaSamreen();
+        addObject(samreen, 6, 10);   
+        samreen.assignSeat();
+
         VinothYashwant vinothyashwant = new VinothYashwant();
         addObject(vinothyashwant,5,6);
         vinothyashwant.assignSeat();
@@ -176,7 +180,7 @@ public class Classroom extends World
         RainaUpadhyay rainaupadhyay = new RainaUpadhyay();
         addObject(rainaupadhyay,3,6);
         rainaupadhyay.assignSeat();
-
+        
         EngelbertsonSpencer engelbertsonSpencer = new EngelbertsonSpencer(true);
         addObject(engelbertsonSpencer,2,7);
         engelbertsonSpencer.assignSeat(); //this method does nothing other than setting variables to the exact same value
@@ -184,7 +188,7 @@ public class Classroom extends World
         KrishivJaini krishivjaini = new KrishivJaini();
         addObject(krishivjaini,8,10);
         krishivjaini.assignSeat();
-
+   
         KrishnanSanjay krishnansanjay = new KrishnanSanjay();
         addObject(krishnansanjay,8,3);
         krishnansanjay.assignSeat();
@@ -228,6 +232,10 @@ public class Classroom extends World
         LucasCaswell lucascaswell = new LucasCaswell();
         addObject(lucascaswell,2,3);
         lucascaswell.assignSeat();
+     
+        TotreArjun totrearjun = new TotreArjun();
+        addObject(totrearjun,5,3);
+        totrearjun.assignSeat();
 
         BishalDas bishaldas = new BishalDas();
         addObject(bishaldas,6,4);
