@@ -1,3 +1,4 @@
+
 import java.util.*;
 import greenfoot.*;
 //import java.util.ArrayList;
@@ -146,14 +147,21 @@ public class Classroom extends World
     private void prepare()
     {
         createDeskLayout();
-
-
  // Each student needs to create their specific instance following the KilgoreTrout example.
  // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
  // and then clicking on the inspect text
         KilgoreTrout kilgoretrout = new KilgoreTrout();
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
+        
+        VinothYashwant vinothyashwant = new VinothYashwant();
+        addObject(vinothyashwant,5,6);
+        vinothyashwant.assignSeat();
+        
+        AaravJaura aaravjaura = new AaravJaura();
+        addObject(aaravjaura, 2,4);
+        aaravjaura.assignSeat();
+  
 
         BharadhwajSaharsh bharadhwajsaharsh = new BharadhwajSaharsh();
         addObject(bharadhwajsaharsh,9,6);
@@ -163,41 +171,63 @@ public class Classroom extends World
         addObject(vinodpranav, 5,4);
         vinodpranav.assignSeat();
 
+
+        AnayC anay = new AnayC(); 
+        addObject(anay, 3, 7); 
+        kilgoretrout.assignSeat();
+    
+        
         MageshMeghna meghnamagesh = new MageshMeghna();
         addObject(meghnamagesh,5,10);
         meghnamagesh.assignSeat();
+
+       
+        
 
         RainaUpadhyay rainaupadhyay = new RainaUpadhyay();
         addObject(rainaupadhyay,3,6);
         rainaupadhyay.assignSeat();
         
+       
+  
+
         EngelbertsonSpencer engelbertsonSpencer = new EngelbertsonSpencer(true);
         addObject(engelbertsonSpencer,2,7);
         engelbertsonSpencer.assignSeat(); //this method does nothing other than setting variables to the exact same value
  
+ 
         KrishivJaini krishivjaini = new KrishivJaini();
         addObject(krishivjaini,8,10);
         krishivjaini.assignSeat();
+   
 
         KrishnanSanjay krishnansanjay = new KrishnanSanjay();
         addObject(krishnansanjay,8,3);
         krishnansanjay.assignSeat();
 
+  
+        AmatoNakayama amatoNakayama = new AmatoNakayama();
+        addObject(amatoNakayama,amatoNakayama.mySeatX,amatoNakayama.mySeatY);
+        amatoNakayama.assignSeat();
+
         ShastriAryav shastriaryav = new ShastriAryav();
         addObject(shastriaryav,9,9);
         shastriaryav.assignSeat();
 
-        VinothYashwant vinothyashwant = new VinothYashwant();
-        addObject(vinothyashwant,5,6);
-        vinothyashwant.assignSeat();
-
         ShirolRishi shirolrishi = new ShirolRishi();
         addObject(shirolrishi,9,4);
         shirolrishi.assignSeat();
+     
+        RayhanAli rayhanali = new RayhanAli();
+        addObject(rayhanali, 3,4);
+        rayhanali.assignSeat();
        
+
         JeganKrishna jegankrishna = new JeganKrishna();
         addObject(jegankrishna,6,10);
         jegankrishna.assignSeat();
+
+
 
         SarrafEashan sarrafeashan = new SarrafEashan();
         addObject(sarrafeashan,8,6);
@@ -214,11 +244,29 @@ public class Classroom extends World
         RuBhavanasi rubhavanasi = new RuBhavanasi();
         addObject(rubhavanasi,6,7);
         rubhavanasi.assignSeat();
+     
+        AshaShanbhogue ashashanbhogue = new AshaShanbhogue();
+        addObject(ashashanbhogue,6,3);
+        ashashanbhogue.assignSeat();
+
+
+
+        
+        addObject(sarrafeashan,8,6);
+        sarrafeashan.assignSeat();
+
+
 
   
 
 
 
+
+
+
+        LucasCaswell lucascaswell = new LucasCaswell();
+        addObject(lucascaswell,2,3);
+        lucascaswell.assignSeat();
 
     }
     
@@ -293,8 +341,4 @@ public class Classroom extends World
    }
 }
 
-
 }
-
-
-
