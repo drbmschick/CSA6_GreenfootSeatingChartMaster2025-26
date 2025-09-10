@@ -154,7 +154,7 @@ public class Classroom extends World
         kilgoretrout.assignSeat();
         
         KhoslaSamreen samreen = new KhoslaSamreen();
-        addObject(samreen, 6, 10);   
+        addObject(samreen, 6, 9);   
         samreen.assignSeat();
 
 
