@@ -1,17 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The SanjanaSalkar class can be used as a model for your own class that represents you and your seating location in AP CSA
+ * The IshitaPrasad class can be used as a model for your own class that represents you and your seating location in AP CSA
  * 
  * @author Mr. Kaehms
  * @version 2.0 Aug 13, 2019
  * @version 3.0 July 21, 2020
  */
-public class SanjanaSalkar extends Student implements SpecialInterestOrHobby
+public class IshitaPrasad extends Student implements SpecialInterestOrHobby
 {
-
     /**
-     * Constructor for the SanjanaSalkar class.
+     * Constructor for the IshitaPrasad class.
      * Constructors are special methods with the same exact name as the class name.  
      * Constructors to not have return types.
      * Constructors can be overloaded. This means we can call a constructor with different sets of parameter
@@ -22,15 +21,18 @@ public class SanjanaSalkar extends Student implements SpecialInterestOrHobby
      * @param int s (seat number within row seating arrangement)
      * 
      */
-    public SanjanaSalkar(String f, String l, int r, int s) {
+    public IshitaPrasad(String f, String l, int r, int s) {
         firstName=f;
         lastName=l;
-        mySeatX=r;
-        mySeatY=s;
+        mySeatX=3;
+        mySeatY=5;
         portraitFile=f.toLowerCase()+l.toLowerCase()+".jpg";    // Make sure to name your image files firstlast.jpg, all lowercase!!!
         standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
         soundFile=f.toLowerCase()+l.toLowerCase()+".wav";  // Make sure to name your sound files firstlast.wav, all lowercase!!!
         setImage(portraitFile);
+        GreenfootImage img = getImage();
+        img.scale(img.getWidth() / 3, img.getHeight() / 3);
+        setImage(img);
         sitting=true;
     }
     /**
@@ -38,42 +40,49 @@ public class SanjanaSalkar extends Student implements SpecialInterestOrHobby
      * Pay attention to how the row and seat variables set the location of the image.  1,1 is the first cell in the upper left
      * of the classroom.
      */
-    public SanjanaSalkar() {
-        firstName="Sanjana";
-        lastName="Salkar";
-        mySeatX=8;
-        mySeatY=7;
+    public IshitaPrasad() {
+        firstName="Ishita";
+        lastName="Prasad";
+        mySeatX=3;
+        mySeatY=5;
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
         soundFile=firstName.toLowerCase()+ lastName.toLowerCase()+".wav";
         setImage(portraitFile);
+        GreenfootImage img = getImage();
+        img.scale(img.getWidth() / 3, img.getHeight() / 3);
+        setImage(img);
         sitting=true;
     }
     
      /**
-     * Act - do whatever the SanjanaSalkar actor wants to do. This method is called whenever
+     * Act - do whatever the IshitaPrasad actor wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */   
     public void act() 
     {
         // Add your action code here.
         if(Greenfoot.mouseClicked(this)){
-          //  if (sitting){
-                sitting=false;
-                setImage(standingFile);
-                System.out.println(""); // Print a blank line to create space between any student output.
-                getName();
-                sayName(soundFile);
-            
-                myHobby("I like to read and draw");
-            // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
-            // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
-            // Call the sitDown() method to move back  to your seat
-            
-                Staircase();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
-           
-                sitDown();
+                if (sitting) {
+                    sitting=false;
+                    setImage(standingFile);
+                    GreenfootImage standingImg = getImage();
+                    standingImg.scale(standingImg.getWidth() / 20, standingImg.getHeight() / 20);
+                    setImage(standingImg);
+                    System.out.println(""); // Print a blank line to create space between any student output.
+                    getName();
+                    sayName(soundFile);
+                
+                    myHobby("I like baking/cooking");
+                // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
+                // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
+                // Call the sitDown() method to move back  to your seat
+                
+                    spinAndJump();  // Your own special method
+               
+                    sitDown();
+                }
             }
         
     } 
@@ -93,58 +102,23 @@ public class SanjanaSalkar extends Student implements SpecialInterestOrHobby
 
    
     /**
-     * This is a local method specific to the SanjanaSalkar class used to animate the character once the image is clicked on.
+     * This is a local method specific to the IshitaPrasad class used to animate the character once the image is clicked on.
      * You should write your own methods to perform your own animation for your character/avatar.
      */
-    public void Staircase(){
-        setLocation(0,0);
-         Greenfoot.delay(10);
-        // move rightds
-        for (int i=1;i<=9;i++){
-            setLocation(i,0);
-            Greenfoot.delay(10);
+     public void spinAndJump(){
+        setRotation(0);
+        // Spin 360 degrees
+        for(int i=0; i<360; i+=15){
+            setRotation(i);
+            Greenfoot.delay(5);
         }
-        // move back
-        for (int i=1;i<=5;i++){
-            setLocation(9,i);
-            Greenfoot.delay(10);
-        }      
-         // move left
-        for (int i=2;i>=0;i--){
-            setLocation(i,9);
-            Greenfoot.delay(10);
-        }      
-              // move Forward
-        for (int i=2;i>=0;i--){
-            setLocation(0,i);
-            Greenfoot.delay(10);
-        }   
-           Greenfoot.delay(20);
-           returnToSeat();
-           // move left
-        for (int i=2;i>=0;i--){
-            setLocation(i,6);
-            Greenfoot.delay(10);
-        }      
-              // move Forward
-        for (int i=2;i>=0;i--){
-            setLocation(0,i);
-            Greenfoot.delay(10);
-        }   
-           Greenfoot.delay(20);
-           returnToSeat();
-        // move left
-        for (int i=2;i>=0;i--){
-            setLocation(i,3);
-            Greenfoot.delay(10);
-        }      
-              // move Forward
-        for (int i=2;i>=0;i--){
-            setLocation(0,i);
-            Greenfoot.delay(10);
-        }   
-           Greenfoot.delay(20);
-           returnToSeat();
+        // Jump up and down 3 times
+        for(int i=0; i<3; i++){
+            setLocation(getX(), getY()-1);
+            Greenfoot.delay(5);
+            setLocation(getX(), getY()+1);
+            Greenfoot.delay(5);
+        }
     }
      /**
      * myHobby is one of the interfaces provided.  
@@ -155,4 +129,14 @@ public class SanjanaSalkar extends Student implements SpecialInterestOrHobby
          System.out.println(s);
 }
 
+    
+    public void sitDown() {
+        setRotation(0);
+        setImage(portraitFile);
+        GreenfootImage img = getImage();
+        img.scale(img.getWidth()/3, img.getHeight()/3);
+        setImage(img);
+        setLocation(mySeatX, mySeatY);
+        sitting = true;
+    }
 }
