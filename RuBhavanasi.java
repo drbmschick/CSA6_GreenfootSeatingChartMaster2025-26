@@ -47,7 +47,7 @@ public class RuBhavanasi extends Student implements SpecialInterestOrHobby
         portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
         standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
         soundFile=firstName.toLowerCase()+ lastName.toLowerCase()+".wav";
-;
+        setImage(portraitFile);
         sitting=true;
     }
     

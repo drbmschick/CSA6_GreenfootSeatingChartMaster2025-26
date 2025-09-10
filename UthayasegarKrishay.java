@@ -1,17 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The SanjanaSalkar class can be used as a model for your own class that represents you and your seating location in AP CSA
+ * The UthayasegarKrishay class can be used as a model for your own class that represents you and your seating location in AP CSA
  * 
  * @author Mr. Kaehms
  * @version 2.0 Aug 13, 2019
  * @version 3.0 July 21, 2020
  */
-public class SanjanaSalkar extends Student implements SpecialInterestOrHobby
+public class UthayasegarKrishay extends Student implements SpecialInterestOrHobby
 {
 
     /**
-     * Constructor for the SanjanaSalkar class.
+     * Constructor for the UthayasegarKrishay class.
      * Constructors are special methods with the same exact name as the class name.  
      * Constructors to not have return types.
      * Constructors can be overloaded. This means we can call a constructor with different sets of parameter
@@ -22,7 +22,7 @@ public class SanjanaSalkar extends Student implements SpecialInterestOrHobby
      * @param int s (seat number within row seating arrangement)
      * 
      */
-    public SanjanaSalkar(String f, String l, int r, int s) {
+    public UthayasegarKrishay(String f, String l, int r, int s) {
         firstName=f;
         lastName=l;
         mySeatX=r;
@@ -38,11 +38,11 @@ public class SanjanaSalkar extends Student implements SpecialInterestOrHobby
      * Pay attention to how the row and seat variables set the location of the image.  1,1 is the first cell in the upper left
      * of the classroom.
      */
-    public SanjanaSalkar() {
-        firstName="Sanjana";
-        lastName="Salkar";
-        mySeatX=8;
-        mySeatY=7;
+    public UthayasegarKrishay() {
+        firstName="Krishay";
+        lastName="Uthayasegar";
+        mySeatX=7;
+        mySeatY=9;
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
@@ -52,7 +52,7 @@ public class SanjanaSalkar extends Student implements SpecialInterestOrHobby
     }
     
      /**
-     * Act - do whatever the SanjanaSalkar actor wants to do. This method is called whenever
+     * Act - do whatever the UthayasegarKrishay actor wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */   
     public void act() 
@@ -66,12 +66,12 @@ public class SanjanaSalkar extends Student implements SpecialInterestOrHobby
                 getName();
                 sayName(soundFile);
             
-                myHobby("I like to read and draw");
+                myHobby("I like to play with my dog");
             // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat
             
-                Staircase();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
+                ZigZagClass();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
            
                 sitDown();
             }
@@ -93,58 +93,27 @@ public class SanjanaSalkar extends Student implements SpecialInterestOrHobby
 
    
     /**
-     * This is a local method specific to the SanjanaSalkar class used to animate the character once the image is clicked on.
+     * This is a local method specific to the UthayasegarKrishay class used to animate the character once the image is clicked on.
      * You should write your own methods to perform your own animation for your character/avatar.
      */
-    public void Staircase(){
+    public void ZigZagClass(){
         setLocation(0,0);
-         Greenfoot.delay(10);
-        // move rightds
-        for (int i=1;i<=9;i++){
-            setLocation(i,0);
-            Greenfoot.delay(10);
+        Greenfoot.delay(5);
+        for (int row=0;row<=10;row+=2) {
+            if (row%4==0) {
+                for (int col=0; col<10;col++) {
+                    setLocation(col,row);
+                    Greenfoot.delay(5);
+                }
+            } else {
+                for (int col=9; col>=0;col--) {
+                    setLocation(col,row);
+                    Greenfoot.delay(5);
+                }
+            }
         }
-        // move back
-        for (int i=1;i<=5;i++){
-            setLocation(9,i);
-            Greenfoot.delay(10);
-        }      
-         // move left
-        for (int i=2;i>=0;i--){
-            setLocation(i,9);
-            Greenfoot.delay(10);
-        }      
-              // move Forward
-        for (int i=2;i>=0;i--){
-            setLocation(0,i);
-            Greenfoot.delay(10);
-        }   
-           Greenfoot.delay(20);
-           returnToSeat();
-           // move left
-        for (int i=2;i>=0;i--){
-            setLocation(i,6);
-            Greenfoot.delay(10);
-        }      
-              // move Forward
-        for (int i=2;i>=0;i--){
-            setLocation(0,i);
-            Greenfoot.delay(10);
-        }   
-           Greenfoot.delay(20);
-           returnToSeat();
-        // move left
-        for (int i=2;i>=0;i--){
-            setLocation(i,3);
-            Greenfoot.delay(10);
-        }      
-              // move Forward
-        for (int i=2;i>=0;i--){
-            setLocation(0,i);
-            Greenfoot.delay(10);
-        }   
-           Greenfoot.delay(20);
-           returnToSeat();
+        Greenfoot.delay(10);
+        returnToSeat();
     }
      /**
      * myHobby is one of the interfaces provided.  
