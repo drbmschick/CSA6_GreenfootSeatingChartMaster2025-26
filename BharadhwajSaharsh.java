@@ -42,7 +42,7 @@ public class BharadhwajSaharsh extends Student implements SpecialInterestOrHobby
         firstName="Saharsh";
         lastName="Bharadhwaj";
         mySeatX=9;
-        mySeatY=6;
+        mySeatY=7;
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
