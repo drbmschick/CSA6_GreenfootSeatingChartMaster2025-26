@@ -150,8 +150,6 @@ public class Classroom extends World
         KhoslaSamreen samreen = new KhoslaSamreen();
         addObject(samreen, 6, 9);   
         samreen.assignSeat();
-
-
         
         VinothYashwant vinothyashwant = new VinothYashwant();
         addObject(vinothyashwant,5,6);
@@ -160,7 +158,6 @@ public class Classroom extends World
         AaravJaura aaravjaura = new AaravJaura();
         addObject(aaravjaura, 2,4);
         aaravjaura.assignSeat();
-  
 
         VinodPranav vinodpranav = new VinodPranav();
         addObject(vinodpranav, 5,4);
@@ -169,61 +166,39 @@ public class Classroom extends World
         AnayC anay = new AnayC(); 
         addObject(anay, 3, 7); 
         kilgoretrout.assignSeat();
-    
         
         MageshMeghna meghnamagesh = new MageshMeghna();
         addObject(meghnamagesh,5,10);
         meghnamagesh.assignSeat();
 
-       
-        
-
         RainaUpadhyay rainaupadhyay = new RainaUpadhyay();
         addObject(rainaupadhyay,3,6);
         rainaupadhyay.assignSeat();
-        
-       
-  
 
         EngelbertsonSpencer engelbertsonSpencer = new EngelbertsonSpencer(true);
         addObject(engelbertsonSpencer,2,7);
         engelbertsonSpencer.assignSeat(); //this method does nothing other than setting variables to the exact same value
  
-
         KrishivJaini krishivjaini = new KrishivJaini();
         addObject(krishivjaini,8,10);
         krishivjaini.assignSeat();
-   
 
         KrishnanSanjay krishnansanjay = new KrishnanSanjay();
         addObject(krishnansanjay,8,3);
         krishnansanjay.assignSeat();
 
-  
         AmatoNakayama amatoNakayama = new AmatoNakayama();
         addObject(amatoNakayama,amatoNakayama.mySeatX,amatoNakayama.mySeatY);
         amatoNakayama.assignSeat();
         
-
         ShastriAryav shastriaryav = new ShastriAryav();
         addObject(shastriaryav,9,9);
         shastriaryav.assignSeat();
 
-
-        addObject(vinothyashwant,5,6);
-        vinothyashwant.assignSeat();
-
-        
         SanjanaSalkar sanjanasalkar = new SanjanaSalkar();
         addObject(sanjanasalkar,8,7);
         sanjanasalkar.assignSeat();
   
-        //VinothYashwant vinothyashwant = new VinothYashwant();
-        //addObject(vinothyashwant,5,6);
-        //vinothyashwant.assignSeat();
-
-
-
         ShirolRishi shirolrishi = new ShirolRishi();
         addObject(shirolrishi,9,4);
         shirolrishi.assignSeat();
@@ -231,12 +206,10 @@ public class Classroom extends World
         RayhanAli rayhanali = new RayhanAli();
         addObject(rayhanali, 3,4);
         rayhanali.assignSeat();
-       
 
         JeganKrishna jegankrishna = new JeganKrishna();
         addObject(jegankrishna,6,10);
         jegankrishna.assignSeat();
-
 
         SarrafEashan sarrafeashan = new SarrafEashan();
         addObject(sarrafeashan,8,6);
@@ -277,7 +250,6 @@ public class Classroom extends World
         BishalDas bishaldas = new BishalDas();
         addObject(bishaldas,6,4);
         bishaldas.assignSeat();
-
 
     }
     
