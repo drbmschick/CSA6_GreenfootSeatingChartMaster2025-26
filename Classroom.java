@@ -260,6 +260,10 @@ public class Classroom extends World
         addObject(gracema,9,3);
         gracema.assignSeat();
 
+        IniyaRajanikanth iniyarajanikanth = new IniyaRajanikanth();
+        addObject(iniyarajanikanth,8,4);
+        iniyarajanikanth.assignSeat();
+
     }
     
     public List<Student> getAllStudents(){
