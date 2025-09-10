@@ -137,12 +137,6 @@ public class Classroom extends World
         studentdesk20.setDeskGroup(8);
     }
    
-    
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
-    
     private void prepare()
     {
         createDeskLayout();
@@ -158,7 +152,7 @@ public class Classroom extends World
         uthayasegarkrishay.assignSeat();
         
         KhoslaSamreen samreen = new KhoslaSamreen();
-        addObject(samreen, 6, 10);   
+        addObject(samreen, 6, 9);   
         samreen.assignSeat();
         
         VinothYashwant vinothyashwant = new VinothYashwant();
@@ -200,10 +194,17 @@ public class Classroom extends World
         ShastriAryav shastriaryav = new ShastriAryav();
         addObject(shastriaryav,9,9);
         shastriaryav.assignSeat();
+
+
+        addObject(vinothyashwant,5,6);
+        vinothyashwant.assignSeat();
+
         
         SanjanaSalkar sanjanasalkar = new SanjanaSalkar();
         addObject(sanjanasalkar,8,7);
         sanjanasalkar.assignSeat();
+
+
 
         ShirolRishi shirolrishi = new ShirolRishi();
         addObject(shirolrishi,9,4);
@@ -232,7 +233,11 @@ public class Classroom extends World
         RuBhavanasi rubhavanasi = new RuBhavanasi();
         addObject(rubhavanasi,6,7);
         rubhavanasi.assignSeat();
-     
+
+        IshitaPrasad prasadishita = new IshitaPrasad();
+        addObject(prasadishita,5,10);
+        prasadishita.assignSeat();
+        
         AshaShanbhogue ashashanbhogue = new AshaShanbhogue();
         addObject(ashashanbhogue,6,3);
         ashashanbhogue.assignSeat();
@@ -287,7 +292,6 @@ public class Classroom extends World
     }
     
  
-    
     // modified from https://beginnersbook.com/2014/01/how-to-append-to-a-file-in-java/
     
 
@@ -320,5 +324,5 @@ public class Classroom extends World
          ioe.printStackTrace();
        }
    }
-}
+ }
 }
