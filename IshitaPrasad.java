@@ -9,8 +9,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class IshitaPrasad extends Student implements SpecialInterestOrHobby
 {
-<<<<<<< HEAD
-
     /**
      * Constructor for the IshitaPrasad class.
      * Constructors are special methods with the same exact name as the class name.  
@@ -87,76 +85,11 @@ public class IshitaPrasad extends Student implements SpecialInterestOrHobby
                 }
             }
         
-=======
-    private GreenfootImage originalPortrait;
-
-    /**
-     * Constructor for the IshitaPrasad class.
-     */
-    public IshitaPrasad(String f, String l, int r, int s) {
-        firstName = f;
-        lastName = l;
-        mySeatX = 6;
-        mySeatY = 6;
-        portraitFile = f.toLowerCase() + l.toLowerCase() + ".jpg";    
-        standingFile = f.toLowerCase() + l.toLowerCase() + "-standing.jpg";
-        soundFile = f.toLowerCase() + l.toLowerCase() + ".wav";  
-
-        GreenfootImage portrait = new GreenfootImage(portraitFile);
-        portrait.scale(portrait.getWidth() / 3, portrait.getHeight() / 3);  
-        setImage(portrait);
-        originalPortrait = portrait;
-
-        sitting = true;
-    }
-
-    /**
-     * Default constructor, if you don't pass in a name and seating location
-     */
-    public IshitaPrasad() {
-        firstName = "Ishita";
-        lastName = "Prasad";
-        mySeatX = 6;
-        mySeatY = 6;
-        portraitFile = firstName.toLowerCase() + lastName.toLowerCase() + ".jpg";
-        standingFile = firstName.toLowerCase() + lastName.toLowerCase() + "-standing.jpg";
-        soundFile = firstName.toLowerCase() + lastName.toLowerCase() + ".wav";
-
-        GreenfootImage portrait = new GreenfootImage(portraitFile);
-        portrait.scale(portrait.getWidth() / 3, portrait.getHeight() / 3);  
-        setImage(portrait);
-        originalPortrait = portrait;
-
-        sitting = true;
-    }
-    
-    /**
-     * Act - called whenever the 'Act' or 'Run' button gets pressed
-     */   
-    public void act() 
-    {
-        if (Greenfoot.mouseClicked(this)) {
-            sitting = false;
-            GreenfootImage standing = new GreenfootImage(standingFile);
-            standing.scale(standing.getWidth() / 15, standing.getHeight() / 15);  
-            setImage(standing);
-
-            System.out.println(""); // blank line for spacing
-            getName();
-            sayName(soundFile);
-            myHobby("I like baking/cooking");
-            spinAndJump();  // custom animation
-            sitDown();
-            setImage(originalPortrait);
-            returnToSeat();
-        }
->>>>>>> 267e45a (Seating chart project final code)
     } 
     
     /**
      * Prints the first and last name to the console
      */
-<<<<<<< HEAD
     public void getName(){
         System.out.println("My name is " + firstName + " " + lastName);
     }
@@ -205,33 +138,5 @@ public class IshitaPrasad extends Student implements SpecialInterestOrHobby
         setImage(img);
         setLocation(mySeatX, mySeatY);
         sitting = true;
-=======
-    public void getName() {
-        System.out.println("My name is " + firstName + " " + lastName);
-    }
-
-    /**
-     * Animate the character once the image is clicked
-     */
-    public void spinAndJump() {
-        for (int i = 0; i < 360; i += 15) {
-            setRotation(i);
-            Greenfoot.delay(5);
-        }
-        for (int i = 0; i < 3; i++) {
-            setLocation(getX(), getY() - 1);
-            Greenfoot.delay(5);
-            setLocation(getX(), getY() + 1);
-            Greenfoot.delay(5);
-        }
-        
-    }
-
-    /**
-     * Implementation of SpecialInterestOrHobby interface
-     */
-    public void myHobby(String s) {
-        System.out.println(s);
->>>>>>> 267e45a (Seating chart project final code)
     }
 }
