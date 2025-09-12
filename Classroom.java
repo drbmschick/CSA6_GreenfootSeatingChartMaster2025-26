@@ -164,9 +164,14 @@ public class Classroom extends World
         addObject(aaravjaura, 2,4);
         aaravjaura.assignSeat();
 
+        BharadhwajSaharsh bharadhwajsaharsh = new BharadhwajSaharsh();
+        addObject(bharadhwajsaharsh,9,7);
+        bharadhwajsaharsh.assignSeat();
+        
         VinodPranav vinodpranav = new VinodPranav();
         addObject(vinodpranav, 5,4);
         vinodpranav.assignSeat();
+
 
         AnayC anay = new AnayC(); 
         addObject(anay, 3, 7); 
@@ -259,7 +264,7 @@ public class Classroom extends World
         GraceMa gracema = new GraceMa();
         addObject(gracema,9,3);
         gracema.assignSeat();
-
+        
         IniyaRajanikanth iniyarajanikanth = new IniyaRajanikanth();
         addObject(iniyarajanikanth,8,4);
         iniyarajanikanth.assignSeat();
@@ -267,6 +272,10 @@ public class Classroom extends World
         RehanJohn johnrehan = new RehanJohn();
         addObject(johnrehan,8,9);
         johnrehan.assignSeat();
+
+        KhoslaSamreen khoslasamreen = new KhoslaSamreen();
+        addObject(khoslasamreen, 6, 9);
+        khoslasamreen.assignSeat();
 
     }
     
@@ -338,5 +347,10 @@ public class Classroom extends World
          ioe.printStackTrace();
        }
    }
- }
+
 }
+
+
+ }
+
+
