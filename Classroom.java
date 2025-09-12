@@ -269,10 +269,13 @@ public class Classroom extends World
         addObject(iniyarajanikanth,8,4);
         iniyarajanikanth.assignSeat();
         
+        RehanJohn johnrehan = new RehanJohn();
+        addObject(johnrehan,8,9);
+        johnrehan.assignSeat();
+
         KhoslaSamreen khoslasamreen = new KhoslaSamreen();
         addObject(khoslasamreen, 6, 9);
         khoslasamreen.assignSeat();
-
 
     }
     
