@@ -27,8 +27,8 @@ public class KhoslaSamreen extends Student implements SpecialInterestOrHobby
     public KhoslaSamreen() {
     firstName = "Samreen";
     lastName = "Khosla";
-    mySeatX = 20;   
-    mySeatY = 10;   
+    mySeatX = 6;   
+    mySeatY = 9;   
 
     portraitFile = "samreenkhosla.jpg";
     standingFile = "samreenkhosla-standing.jpg";
