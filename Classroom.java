@@ -263,6 +263,10 @@ public class Classroom extends World
         IniyaRajanikanth iniyarajanikanth = new IniyaRajanikanth();
         addObject(iniyarajanikanth,8,4);
         iniyarajanikanth.assignSeat();
+        
+        RehanJohn johnrehan = new RehanJohn();
+        addObject(johnrehan,8,9);
+        johnrehan.assignSeat();
 
     }
     
