@@ -153,7 +153,7 @@ public class Classroom extends World
         matthewlogan.assignSeat();
         
         KhoslaSamreen samreen = new KhoslaSamreen();
-        addObject(samreen, 6, 10);   
+        addObject(samreen, 6, 9);   
         samreen.assignSeat();
         
         VinothYashwant vinothyashwant = new VinothYashwant();
@@ -226,7 +226,7 @@ public class Classroom extends World
         uthayasegarkrishay.assignSeat();
         
         MageshMeghna meghnamagesh = new MageshMeghna();
-        addObject(meghnamagesh,5,10);
+        addObject(meghnamagesh,5,9);
         meghnamagesh.assignSeat();
 
         RainaUpadhyay rainaupadhyay = new RainaUpadhyay();
